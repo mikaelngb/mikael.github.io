@@ -63,7 +63,7 @@ div.content {
 }
 
 #projects {
-  background-image: url("/public/image/project.png");
+  background-image: url("https://unsplash.com/photos/aJYO8JmVodY");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
