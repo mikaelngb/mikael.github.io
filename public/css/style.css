@@ -1,0 +1,171 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.profile-sidebar {
+  position: relative;
+}
+
+.profile-sidebar img {
+  width: 200px;
+}
+
+.profile-name {
+  text-align: center;
+  position: absolute;
+  opacity: 70%;
+  bottom: 0px;
+  color: white;
+  width: 100%;
+}
+
+.sidebar a {
+  display: block;
+  color: lightgray;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+}
+
+#home {
+  background-image: url("/public/image/home-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#contact {
+  background-image: url("/public/image/contact.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#projects {
+  background-image: url("/public/image/project.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-text {
+  font-size: 50px;
+  font-weight: bolder;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.home-text-overlay,
+.project-text-overlay {
+  background-color: darkgray;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.home-text p {
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.home-text div {
+  display: block;
+  animation: 5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1 normal both running
+    tracking-in-contract-bck-top;
+}
+
+.content-animation {
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.wa-number,
+.email,
+.github {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.number a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+  .profile-sidebar img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .sidebar-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .profile-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+  }
+
+  .wa-number,
+  .email,
+  .github {
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+
+  .profile-sidebar img {
+    width: 100%;
+  }
+}
