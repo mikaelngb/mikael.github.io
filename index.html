@@ -3,6 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="public/image/portfolio.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -11,11 +27,94 @@
       crossorigin="anonymous"
     />
 
-    <title>Hello, world!</title>
+    <script
+      src="https://kit.fontawesome.com/234b4cd900.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link href="public/css/style.css" rel="stylesheet" />
+    <script src="public/js/index.js" rel="stylesheet"></script>
+
+    <title>My Portfolio</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="sidebar bg-dark">
+      <div class="profile-sidebar">
+        <img src="public/image/display_picutre.JPG" />
+        <div class="profile-name p-2 bg-dark fw-bold">
+          <p class="m-0">Mikael, 25</p>
+        </div>
+      </div>
+      <div class="sidebar-item">
+        <a
+          id="home-link"
+          class="active"
+          href="#home"
+          onclick="moveToDiv('home', this.id)"
+          >Home</a
+        >
+        <a
+          id="project-link"
+          href="#projects"
+          onclick="moveToDiv('projects', this.id)"
+          >Projects</a
+        >
+        <a
+          id="contact-link"
+          href="#contact"
+          onclick="moveToDiv('contact', this.id)"
+          >Contact</a
+        >
+      </div>
+    </div>
 
+    <div
+      id="home"
+      class="vh-100 content d-flex justify-content-center align-items-center"
+    >
+      <div class="home-text">
+        <div class="home-text-overlay">
+          <div>Hello, I'm Mikael</div>
+          <div>Backend Engineer</div>
+          <p>Currently learning about software automation testing</p>
+        </div>
+      </div>
+    </div>
+    <div id="projects" class="vh-100 content">
+      <div class="project-content d-flex justify-content-center mb-2">
+        <h1>My Projects</h1>
+      </div>
+      <div
+        class="mt-2 d-flex justify-content-center align-items-center"
+        style="min-height: 80vh"
+      >
+        <div class="project-text-overlay"><h1>Still Building ....</h1></div>
+      </div>
+    </div>
+    <div
+      id="contact"
+      class="vh-100 content d-flex justify-content-center align-items-center flex-column"
+    >
+      <div class="d-flex align-items-center number mb-3">
+        <i class="fa-brands fa-whatsapp fa-4x"></i
+        ><span class="wa-number mx-4">(+62) 81-160-77604</span>
+      </div>
+
+      <div class="d-flex align-items-center justify-content-center number mb-3">
+        <i class="fa-solid fa-envelope fa-4x"></i>
+        <span class="email mx-4">mikaelaja10003@gmail.com</span>
+      </div>
+
+      <div class="number mb-3">
+        <a
+          href="https://github.com/mikaelngb"
+          target="_blank"
+          class="d-flex align-items-center justify-content-center"
+          ><i class="fa-brands fa-github fa-4x"></i
+          ><span class="github mx-4">https://github.com/mikaelngb</span></a
+        >
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
