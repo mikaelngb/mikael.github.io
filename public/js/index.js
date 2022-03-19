@@ -20,3 +20,9 @@ function moveToDiv(target, current){
     el.scrollIntoView()
     el.classList.add('content-animation')
 }
+
+function backToTop()
+{
+    const el = document.getElementById('home-link')
+    el.scrollIntoView()
+}
